@@ -1,0 +1,50 @@
+ÈÑäÇãå Çí ˜å Ïæ ÂÑÇíå ÈÇ Øæá ãÎÊáİ ÏÑíÇİÊ æ í˜ ÂÑÇíå Èå Øæá åÑ Ïæ ÂäåÇ ÊÔ˜íá æ Èå ÕæÑÊ ÕÚæÏí ãÑÊÈ ˜äÏ
+     int i,length1,length2,j,help;
+     System.out.print("Enter length of array1:");
+     Scanner sc1 = new Scanner(System.in);
+     length1=sc1.nextInt();
+     int[] intArray1;
+     intArray1 = new int[length1];
+     System.out.println("Enter namber:");
+      for(j=0;j<length1;j++)
+       {
+       intArray1[j] = sc1.nextInt();
+       }
+     System.out.print("Enter length of array2:");
+     Scanner sc2 = new Scanner(System.in);
+     length2=sc2.nextInt();
+     int[] intArray2 = new int[length2];
+     System.out.println("Enter namber:");
+      for(j=0;j<length2;j++)
+       {
+       intArray2[j] = sc2.nextInt();
+       }
+     int sumi=length1+length2;
+     int p=length1;
+     int[] intsum = new int[sumi];
+      for(i=0;i<length1;i++)
+       {
+        intsum[i]=intArray1[i];
+       }
+      for(j=0;j<length2;j++)
+       {
+        intsum[p]=intArray2[j];
+        p++;
+       }
+      for(int cont=0;cont<sumi;cont++)
+       {
+        for(int chek=0;chek<sumi;chek++)
+         {
+          if(intsum[cont]<=intsum[chek])
+           {
+            help=intsum[chek]; 
+            intsum[chek]=intsum[cont];
+            intsum[cont]=help;
+           }
+         }
+      }
+     System.out.println("be tartib afzayande:");
+      for(int print=0;print<sumi;print++)
+       {
+       System.out.println(intsum[print]);
+       }
